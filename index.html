@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A loja oficial de Miltons - Adquira os modelos mais cobiçados: Milton-Chad, Milton-Básico, Milton-Social e Milton-Mago!">
+    <title>Venda de Miltons | Loja Oficial</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Google Fonts Poppins & Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO E NAVEGAÇÃO -->
+    <header class="cabecalho-site">
+        <nav class="navegacao">
+            <div class="nav-container">
+                <a href="#inicio" class="logo-marca">
+                    <span class="logo-icone"><i class="fa-solid fa-crown"></i></span>
+                    <span class="logo-texto">Miltons<span>Store</span></span>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a class="nav-bar active" href="#inicio">Início</a></li>
+                    <li><a class="nav-bar" href="#produtos">Produtos</a></li>
+                    <li><a class="nav-bar" href="#sobre">Sobre Nós</a></li>
+                    <li><a class="nav-bar" href="#depoimentos">Avaliações</a></li>
+                    <li><a class="nav-bar" href="#contato">Contato</a></li>
+                </ul>
+
+                <div class="nav-acoes">
+                    <button class="btn-carrinho" id="btnAbrirCarrinho" aria-label="Ver carrinho de compras">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="carrinho-contador" id="carrinhoContador">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTAINER PRINCIPAL / HERO SECTION -->
+    <div class="container" id="inicio">
+
+        <!-- Coluna 1: Conteúdo Principal / Textos -->
+        <main class="conteudo-principal">
+            <div class="box-texto">
+                <span class="badge-destaque"><i class="fa-solid fa-fire"></i> O Fenômeno Oficial</span>
+                <h1>Venda de Miltons</h1>
+                <p>Já pensou em ter algum dos nossos melhores produtos? Coleções raras, presença marcante, carisma incomparável e estilos feitos sob medida para qualquer ocasião da vida!</p>
+                
+                <div class="hero-botoes">
+                    <a href="#produtos" class="btn-hero btn-hero-destaque">
+                        <i class="fa-solid fa-bag-shopping"></i> Explorar Coleção
+                    </a>
+                    <a href="#sobre" class="btn-hero btn-hero-secundario">
+                        <i class="fa-solid fa-circle-info"></i> Conhecer História
+                    </a>
+                </div>
+
+                <div class="hero-diferenciais">
+                    <div class="diferencial-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>100% Autêntico</span>
+                    </div>
+                    <div class="diferencial-item">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Entrega Imediata</span>
+                    </div>
+                    <div class="diferencial-item">
+                        <i class="fa-solid fa-star"></i>
+                        <span>Nota 5.0 Estrelas</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Coluna 2: Conteúdo Principal / Card de Destaque -->
+        <main class="conteudo-principal destaque-hero-col">
+            <div class="card-destaque-hero">
+                <div class="destaque-tag-topo">
+                    <i class="fa-solid fa-trophy"></i> Destaque da Semana
+                </div>
+                <div class="destaque-img-wrapper">
+                    <img src="./fotos/milto-chad.jpeg" alt="Milton-Chad em Destaque">
+                    <span class="destaque-preco-tag">R$ 50,00</span>
+                </div>
+                <div class="destaque-info">
+                    <h3>Milton-Chad Supremo</h3>
+                    <p>O produto mais procurado da temporada. Maxilar esculpido, foco inabalável e aura lendária.</p>
+                    <div class="destaque-stats">
+                        <div class="stat-box">
+                            <span class="stat-num">+9999</span>
+                            <span class="stat-rotulo">Aura Chad</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num">10/10</span>
+                            <span class="stat-rotulo">Carisma</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-rotulo">Respeito</span>
+                        </div>
+                    </div>
+                    <button class="btn-comprar btn-comprar-destaque" 
+                            data-id="1" 
+                            data-nome="Milton-Chad" 
+                            data-preco="50.00" 
+                            data-img="./fotos/milto-chad.jpeg">
+                        <i class="fa-solid fa-cart-plus"></i> Garantir Meu Milton-Chad
+                    </button>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- SEÇÃO VITRINE DE PRODUTOS -->
+    <section class="secao-catalogo" id="produtos">
+        <div class="secao-cabecalho">
+            <span class="secao-subtitulo">Catálogo Exclusivo</span>
+            <h2 class="secao-titulo">Escolha o Seu Milton</h2>
+            <p class="secao-descricao">Cada Milton possui habilidades únicas e foi forjado para atender a diferentes momentos e exigências.</p>
+            
+            <!-- Filtros Interativos -->
+            <div class="filtros-produtos">
+                <button class="filtro-btn active" data-categoria="todos">Todos</button>
+                <button class="filtro-btn" data-categoria="popular">Mais Populares</button>
+                <button class="filtro-btn" data-categoria="acessivel">Acessíveis</button>
+                <button class="filtro-btn" data-categoria="vip">Edição VIP</button>
+            </div>
+        </div>
+
+        <div class="vitrine-produtos">
+
+            <!-- Card 1: Milton-Chad -->
+            <div class="vitrine-produtos-card" data-categoria="popular">
+                <div class="card-badge badge-chad">🔥 Lendário</div>
+                <div class="card-imagem-container">
+                    <img src="./fotos/milto-chad.jpeg" alt="Milton-Chad">
+                </div>
+                <h2>Milton-Chad</h2>
+                <div class="card-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span>(1.420)</span>
+                </div>
+                <p>Mandíbula de titânio, olhar penetrante e aura irresistível. Para quem não aceita menos que o topo.</p>
+                <div class="card-preco-box">
+                    <span class="preco-moeda">R$</span>
+                    <span class="preco-valor">50,00</span>
+                </div>
+                <button class="btn-comprar" 
+                        data-id="1" 
+                        data-nome="Milton-Chad" 
+                        data-preco="50.00" 
+                        data-img="./fotos/milto-chad.jpeg">
+                    <i class="fa-solid fa-cart-shopping"></i> Comprar
+                </button>
+            </div>
+
+            <!-- Card 2: Milton-basico -->
+            <div class="vitrine-produtos-card" data-categoria="acessivel">
+                <div class="card-badge badge-basico">⚡ Custo-Benefício</div>
+                <div class="card-imagem-container">
+                    <img src="./fotos/milton.jpeg" alt="Milton-basico">
+                </div>
+                <h2>Milton-básico</h2>
+                <div class="card-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>(980)</span>
+                </div>
+                <p>A versão raiz! Prático, confiável, fiel companheiro de rua e com carisma inabalável pelo menor preço.</p>
+                <div class="card-preco-box">
+                    <span class="preco-moeda">R$</span>
+                    <span class="preco-valor">2,50</span>
+                </div>
+                <button class="btn-comprar" 
+                        data-id="2" 
+                        data-nome="Milton-básico" 
+                        data-preco="2.50" 
+                        data-img="./fotos/milton.jpeg">
+                    <i class="fa-solid fa-cart-shopping"></i> Comprar
+                </button>
+            </div>
+
+            <!-- Card 3: Milton-social -->
+            <div class="vitrine-produtos-card" data-categoria="vip">
+                <div class="card-badge badge-social">💎 Luxo & Executivo</div>
+                <div class="card-imagem-container">
+                    <img src="./fotos/milton-social.jpeg" alt="Milton-social">
+                </div>
+                <h2>Milton-social</h2>
+                <div class="card-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span>(450)</span>
+                </div>
+                <p>Elegância suprema no pretinho básico. Copo na mão, presença VIP nas festas mais exclusivas e refinamento.</p>
+                <div class="card-preco-box">
+                    <span class="preco-moeda">R$</span>
+                    <span class="preco-valor">10.500,00</span>
+                </div>
+                <button class="btn-comprar" 
+                        data-id="3" 
+                        data-nome="Milton-social" 
+                        data-preco="10500.00" 
+                        data-img="./fotos/milton-social.jpeg">
+                    <i class="fa-solid fa-cart-shopping"></i> Comprar
+                </button>
+            </div>
+
+            <!-- Card 4: Milton-mago -->
+            <div class="vitrine-produtos-card" data-categoria="popular">
+                <div class="card-badge badge-mago">🔮 Edição Arcana</div>
+                <div class="card-imagem-container">
+                    <img src="./fotos/milton-mago.jpeg" alt="Milton-mago">
+                </div>
+                <h2>Milton-mago</h2>
+                <div class="card-avaliacao">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span>(832)</span>
+                </div>
+                <p>Mestre das artes ocultas e feitiços miltonianos. Franjinha sagrada, cajado encantado e magia ilimitada.</p>
+                <div class="card-preco-box">
+                    <span class="preco-moeda">R$</span>
+                    <span class="preco-valor">27,50</span>
+                </div>
+                <button class="btn-comprar" 
+                        data-id="4" 
+                        data-nome="Milton-mago" 
+                        data-preco="27.50" 
+                        data-img="./fotos/milton-mago.jpeg">
+                    <i class="fa-solid fa-cart-shopping"></i> Comprar
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE NÓS -->
+    <section class="secao-sobre" id="sobre">
+        <div class="sobre-container">
+            <div class="sobre-texto">
+                <span class="secao-subtitulo">Quem Somos</span>
+                <h2 class="secao-titulo">A Revolução dos Miltons</h2>
+                <p>Nossa jornada começou com um propósito claro: levar a cada canto do Brasil a autenticidade e a magnitude que só a linhagem de Miltons é capaz de entregar.</p>
+                <p>Desde o modesto e leal <strong>Milton-Básico</strong> até a sofisticação inalcançável do <strong>Milton-Social</strong> e o poder arcano do <strong>Milton-Mago</strong>, cada modelo passa por rigorosos testes de qualidade, elegância e postura.</p>
+                
+                <div class="sobre-metricas">
+                    <div class="metrica-item">
+                        <span class="metrica-numero">+15.000</span>
+                        <span class="metrica-legenda">Miltons Adotados</span>
+                    </div>
+                    <div class="metrica-item">
+                        <span class="metrica-numero">99.9%</span>
+                        <span class="metrica-legenda">Clientes Felizes</span>
+                    </div>
+                    <div class="metrica-item">
+                        <span class="metrica-numero">4 Versões</span>
+                        <span class="metrica-legenda">Lendárias</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sobre-cards-grid">
+                <div class="sobre-card">
+                    <div class="sobre-card-icone"><i class="fa-solid fa-certificate"></i></div>
+                    <h3>Selo de Originalidade</h3>
+                    <p>Todos os exemplares possuem certificado de pureza miltoniana e autenticidade intransferível.</p>
+                </div>
+                <div class="sobre-card">
+                    <div class="sobre-card-icone"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h3>Logística Ultra-Rápida</h3>
+                    <p>Embalagem protegida anti-impacto enviada com rastreamento em tempo real.</p>
+                </div>
+                <div class="sobre-card">
+                    <div class="sobre-card-icone"><i class="fa-solid fa-headset"></i></div>
+                    <h3>Suporte Miltoniano 24/7</h3>
+                    <p>Equipe especializada pronta para orientar sobre o cuidado e a manutenção do seu Milton.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DEPOIMENTOS -->
+    <section class="secao-depoimentos" id="depoimentos">
+        <div class="secao-cabecalho">
+            <span class="secao-subtitulo">O que dizem os donos</span>
+            <h2 class="secao-titulo">Avaliações dos Compradores</h2>
+            <p class="secao-descricao">Veja como a vida das pessoas mudou após adquirirem um Milton.</p>
+        </div>
+
+        <div class="depoimentos-grid">
+            <div class="depoimento-card">
+                <div class="depoimento-estrelas">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="depoimento-comentario">"Comprei o Milton-Chad e minha autoconfiança foi parar na estratosfera. Não ando mais na rua, eu desfilo. Recomendo a todos!"</p>
+                <div class="depoimento-autor">
+                    <div class="autor-avatar">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                    </div>
+                    <div class="autor-info">
+                        <h4>Guilherme Ferreira</h4>
+                        <span>Dono de Milton-Chad</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="depoimento-card">
+                <div class="depoimento-estrelas">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="depoimento-comentario">"Por apenas R$ 2,50 o Milton-básico salvou meu churrasco de domingo. Parceiro leal, humilde e não reclama de nada."</p>
+                <div class="depoimento-autor">
+                    <div class="autor-avatar">
+                        <i class="fa-solid fa-user-ninja"></i>
+                    </div>
+                    <div class="autor-info">
+                        <h4>Rafael Sampaio</h4>
+                        <span>Dono de Milton-Básico</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="depoimento-card">
+                <div class="depoimento-estrelas">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="depoimento-comentario">"Investi R$ 10.500 no Milton-social e fechei 3 contratos no primeiro jantar. Ele impõe respeito e elegância instantânea."</p>
+                <div class="depoimento-autor">
+                    <div class="autor-avatar">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="autor-info">
+                        <h4>Fernanda Cavalcanti</h4>
+                        <span>Dona de Milton-Social</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO CONTATO -->
+    <section class="secao-contato" id="contato">
+        <div class="secao-cabecalho">
+            <span class="secao-subtitulo">Fale Conosco</span>
+            <h2 class="secao-titulo">Encomendas & Atendimento</h2>
+            <p class="secao-descricao">Deseja um modelo personalizado ou precisa tirar dúvidas? Envie uma mensagem!</p>
+        </div>
+
+        <div class="contato-container">
+            <form class="formulario-contato" id="formContato">
+                <div class="form-grupo">
+                    <label for="nome">Seu Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: Higor Silva" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="email">Seu Melhor E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="produtoInteresse">Qual Milton você deseja?</label>
+                    <select id="produtoInteresse" name="produtoInteresse">
+                        <option value="chad">Milton-Chad (R$ 50,00)</option>
+                        <option value="basico">Milton-básico (R$ 2,50)</option>
+                        <option value="social">Milton-social (R$ 10.500,00)</option>
+                        <option value="mago">Milton-mago (R$ 27,50)</option>
+                        <option value="todos">Combo com Todos os Miltons</option>
+                    </select>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="mensagem">Mensagem / Observações</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-nos como deseja receber seu Milton..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar-formulario">
+                    <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem
+                </button>
+            </form>
+
+            <div class="contato-info-box">
+                <h3>Informações Rápidas</h3>
+                <p>Nossa central de acolhimento e distribuição está sempre pronta para responder.</p>
+                
+                <div class="info-linha">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>Localização Principal</strong>
+                        <span>Rio de Janeiro - RJ, Brasil</span>
+                    </div>
+                </div>
+
+                <div class="info-linha">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div>
+                        <strong>WhatsApp Comercial</strong>
+                        <span>(21) 99999-MILTON</span>
+                    </div>
+                </div>
+
+                <div class="info-linha">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>E-mail de Contato</strong>
+                        <span>contato@vendademiltons.com.br</span>
+                    </div>
+                </div>
+
+                <div class="info-linha">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <strong>Horário de Envio</strong>
+                        <span>Segunda a Sexta: 08h às 20h</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ DO SITE -->
+    <footer class="rodape-site">
+        <div class="rodape-conteudo">
+            <div class="rodape-coluna">
+                <a href="#inicio" class="logo-marca">
+                    <span class="logo-icone"><i class="fa-solid fa-crown"></i></span>
+                    <span class="logo-texto">Miltons<span>Store</span></span>
+                </a>
+                <p class="rodape-sobre">A pioneira e exclusiva plataforma de comércio dos melhores Miltons do planeta. Tradição, elegância e carisma certificados.</p>
+            </div>
+
+            <div class="rodape-coluna">
+                <h4>Navegação</h4>
+                <ul class="rodape-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#produtos">Catálogo de Produtos</a></li>
+                    <li><a href="#sobre">Nossa História</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Fale Conosco</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape-coluna">
+                <h4>Produtos</h4>
+                <ul class="rodape-links">
+                    <li><a href="#produtos">Milton-Chad</a></li>
+                    <li><a href="#produtos">Milton-Básico</a></li>
+                    <li><a href="#produtos">Milton-Social</a></li>
+                    <li><a href="#produtos">Milton-Mago</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape-coluna">
+                <h4>Redes Sociais</h4>
+                <div class="redes-sociais">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                </div>
+                <div class="selo-seguranca">
+                    <i class="fa-solid fa-lock"></i> Compra 100% Protegida
+                </div>
+            </div>
+        </div>
+
+        <div class="rodape-creditos">
+            <p>&copy; 2026 Venda de Miltons Store. Todos os direitos reservados aos Miltons.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DO CARRINHO DE COMPRAS -->
+    <div class="carrinho-overlay" id="carrinhoOverlay"></div>
+    <div class="carrinho-modal" id="carrinhoModal">
+        <div class="carrinho-header">
+            <h3><i class="fa-solid fa-cart-shopping"></i> Seu Carrinho</h3>
+            <button class="btn-fechar-carrinho" id="btnFecharCarrinho" aria-label="Fechar carrinho">&times;</button>
+        </div>
+
+        <div class="carrinho-itens" id="carrinhoItens">
+            <!-- Itens inseridos via JavaScript -->
+        </div>
+
+        <div class="carrinho-footer">
+            <div class="carrinho-total">
+                <span>Total:</span>
+                <strong id="carrinhoTotalPreco">R$ 0,00</strong>
+            </div>
+            <button class="btn-checkout" id="btnFinalizarPedido">
+                <i class="fa-solid fa-check"></i> Finalizar Pedido
+            </button>
+        </div>
+    </div>
+
+    <!-- TOAST DE NOTIFICAÇÃO -->
+    <div class="toast-notificacao" id="toastNotificacao">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMensagem">Produto adicionado ao carrinho!</span>
+    </div>
+
+    <!-- SCRIPT JS -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
